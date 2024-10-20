@@ -1,0 +1,272 @@
+<!doctype html>
+<html> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>TEAM-MEHEDY</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      h3 {
+  font-size: 15px;   
+        
+      }
+
+      .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+      }
+      @media screen and (min-width: 600px) {
+        .column {
+          width: 50%;
+        }
+      }
+    </style> 
+  <style>
+		body {
+			background-color: black;
+			height: 100vh;
+		}
+
+		.star {
+			position: absolute;
+			top: 0;
+			width: 2px;
+			height: 2px;
+			background-color: rgba(255,255,255,0.5);
+			border-radius: 50%;
+			opacity: 0;
+			animation: star 0.5s linear infinite;
+		}
+
+		@keyframes star {
+			from {
+				transform: translate(0, -50px);
+				opacity: 1;
+			}
+			to {
+				transform: translate(0, calc(100vh + 50px));
+				opacity: 0;
+			}
+		}
+	</style> 
+ </head>
+ <body>
+  <div class="stars-container"> <!-- Create 1000 stars using JavaScript --> 
+  </div> 
+  <script>
+		// Create 1000 stars and append them to the stars-container div
+		const starsContainer = document.querySelector('.stars-container');
+		for (let i = 0; i < 1000; i++) {
+			const star = document.createElement('div');
+			star.classList.add('star');
+			star.style.left = `${Math.random() * 100}%`;
+			star.style.animationDelay = `${Math.random()}s`;
+			starsContainer.appendChild(star);
+		}
+	</script> 
+  <style>
+    #profile {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 50px;
+      }
+      
+      h1 {
+        font-size: 25px;
+        margin-bottom: 25px;
+        text-align: center;
+        color: #FF10F0;
+      }
+      
+      p {
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      
+      #typing {
+        display: inline-block;
+        color: #FFFFFF;
+      }
+      
+      #cursor {
+        display: inline-block;
+        margin-left: 5px;
+        animation: blink .7s infinite;
+      }
+      
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      .profile-pic {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+      
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+  </style>   
+  <div style="text-align:center;">
+   <img src="https://i.postimg.cc/7LbN5LX3/20230906-141856.jpg alt="Head profile picture" width="180" height="180">
+  </div> 
+  <div id="profile"> 
+   <h1>Hi! I'm <br> <span id="typing"></span><span>_</span></h1> 
+  </div> 
+  <script defer>
+    const words = ["|FUCKED BY MEHEDY", "|TEAM WHITE HACKER", "|MEHEDY", "|JOIN TBH VIP FAMALY", "|LOVE YOU WHITE HACKER USER"];
+    const typing = document.getElementById("typing");
+    let currentWordIndex = 0;
+    let currentLetterIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentWord = words[currentWordIndex];
+
+        if (!isDeleting) {
+            typing.innerHTML = currentWord.substring(0, currentLetterIndex + 1);
+            currentLetterIndex++;
+
+            if (currentLetterIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 1000);
+            } else {
+                setTimeout(type, 100);
+            }
+        } else {
+            typing.innerHTML = currentWord.substring(0, currentLetterIndex - 1);
+            currentLetterIndex--;
+
+            if (currentLetterIndex === 0) {
+                isDeleting = false;
+                currentWordIndex++;
+                if (currentWordIndex === words.length) {
+                    currentWordIndex = 0;
+                }
+            }
+
+            setTimeout(type, 100);
+        }
+    }
+
+    type();
+  </script> 
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .facebook-button {
+        display: inline-block;
+        padding: 10px 80px;
+        background-color: #0096FF;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #0096FF;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .
+
+    .telegram-button {
+        display: inline-block;
+        padding: 10px 50px;
+        background-color: #0088cc;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #0088cc;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .telegram-button:hover {
+        box-shadow: 0px 0px 25px #8913ff;
+    }
+  </style> 
+  <div class="button-container"> <a href="https://t.me/+dm1jeAPvLto4MjZl" target="_blank" class="telegram-button">MEHEDY CHANNEL channel</a> 
+  </div>
+  <br> 
+  <style>
+    .button-container {
+        text-align: center;
+    }
+
+    .github-button {
+        display: inline-block;
+        padding: 10px 95px;
+        background-color: #171615;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #171565;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .github-button:hover {
+        box-shadow: 0px 0px 25px #171515;
+    }
+  </style> 
+  <div class="button-container"> <a href="https://github.com/TEAM-RB" target="_blank" class="MEHEDY BY HACKED">GitHub</a> 
+  </div>
+  <br> 
+  <style>
+    .button-container {
+        text-align: center;
+    }
+    .email-button {
+        display: inline-block;
+        padding: 10px 80px;
+        background-color: #FF10F0;
+        border-radius: 25px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0px 0px 15px #FF10F0;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .email-button:hover {
+        box-shadow: 0px 0px 25px #FFA500;
+    }
+</style> 
+  <div class="button-container"> <a href="apps.html" class="email-button">ALL TOOLS</a> 
+  </div>
+  <br> 
+  <footer> 
+   <center> 
+    <h3 style="color:red;">COPYRIGHT RSBD© 2023</h3> 
+   </center> 
+  </footer>  
+ </body>
+</html>
